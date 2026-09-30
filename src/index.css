@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Syne:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,46 +7,36 @@
 @layer base {
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: #090713;
+    background-color: #0c0818;
     color: #ffffff;
     overflow-x: hidden;
   }
 }
 
-/* Custom Utilities for Graphic Designer Aesthetic */
-.text-stroke {
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.7);
-  color: transparent;
-}
-
-.text-stroke-purple {
-  -webkit-text-stroke: 1.5px #a78bfa;
-  color: transparent;
-}
-
+/* Custom Radial Dot Grid Overlay */
 .bg-grid-pattern {
   background-size: 32px 32px;
   background-image: 
-    radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    radial-gradient(circle, rgba(167, 139, 250, 0.12) 1px, transparent 1px);
 }
 
 @keyframes blob {
   0% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
-  33% { transform: translate(30px, -50px) scale(1.1) rotate(120deg); }
-  66% { transform: translate(-20px, 20px) scale(0.9) rotate(240deg); }
+  33% { transform: translate(35px, -45px) scale(1.1) rotate(120deg); }
+  66% { transform: translate(-25px, 25px) scale(0.95) rotate(240deg); }
   100% { transform: translate(0px, 0px) scale(1) rotate(360deg); }
 }
 
 .animate-blob {
-  animation: blob 16s infinite alternate ease-in-out;
+  animation: blob 18s infinite alternate ease-in-out;
 }
 
 .animation-delay-2000 {
-  animation-delay: 2s;
+  animation-delay: 2.5s;
 }
 
 .animation-delay-4000 {
-  animation-delay: 4s;
+  animation-delay: 5s;
 }
 
 @keyframes marquee {
@@ -66,4 +56,5 @@
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out forwards;
 }
+
 

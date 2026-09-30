@@ -10,6 +10,7 @@ import { Curriculum } from './components/Curriculum';
 import { ContactSection } from './components/ContactSection';
 import { CaseStudyDetail } from './components/CaseStudyDetail';
 import { Footer } from './components/Footer';
+import { GalaxyBackground } from './components/GalaxyBackground';
 import { caseStudiesData } from './data/caseStudies';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <CartProvider>
         <ModalProvider>
           <div className="min-h-screen bg-[#090713] text-white flex flex-col font-['Plus_Jakarta_Sans'] selection:bg-[#ec4899] selection:text-white relative overflow-x-hidden">
+            <GalaxyBackground />
             <Navbar
               onSelectModule={(slug) => {
                 setActiveCaseSlug(slug);
