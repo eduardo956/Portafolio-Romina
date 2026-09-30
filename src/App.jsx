@@ -23,7 +23,7 @@ function App() {
     <ToastProvider>
       <CartProvider>
         <ModalProvider>
-          <div className="min-h-screen bg-[#fdf8ff] text-[#1c192c] flex flex-col font-['Plus_Jakarta_Sans'] selection:bg-[#ccbafd] selection:text-[#574782]">
+          <div className="min-h-screen bg-[#090713] text-white flex flex-col font-['Plus_Jakarta_Sans'] selection:bg-[#ec4899] selection:text-white relative overflow-x-hidden">
             <Navbar
               onSelectModule={(slug) => {
                 setActiveCaseSlug(slug);

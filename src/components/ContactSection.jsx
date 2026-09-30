@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { FadeInUp } from './AnimatedText';
 
 export const OfficialWhatsAppIcon = ({ className = "w-5 h-5" }) => (
@@ -11,48 +11,52 @@ export const OfficialWhatsAppIcon = ({ className = "w-5 h-5" }) => (
 
 export const ContactSection = () => {
   return (
-    <section id="contacto" className="w-full max-w-[1280px] mx-auto px-5 md:px-12 py-12 flex justify-center items-center">
+    <section id="contacto" className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 py-16 flex justify-center items-center">
       <FadeInUp delay={0.1} className="w-full">
-        <div className="relative w-full rounded-[2.5rem] bg-[#241740] p-6 sm:p-10 border border-[#3d2766]/60 shadow-2xl overflow-hidden flex flex-col md:flex-row md:items-center justify-between gap-6 group">
+        <div className="relative w-full rounded-[2.5rem] bg-gradient-to-r from-[#8b5cf6] via-[#ec4899] to-[#3b82f6] p-1 shadow-[0_0_50px_rgba(168,85,247,0.4)] overflow-hidden">
           
-          {/* Ambient Glow */}
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#845ec2]/15 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
+          <div className="bg-[#0f0b1e]/95 backdrop-blur-2xl rounded-[2.4rem] p-8 sm:p-12 border border-white/15 flex flex-col md:flex-row md:items-center justify-between gap-8 relative overflow-hidden">
+            
+            {/* Ambient Mesh Glows */}
+            <div className="absolute top-0 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-emerald-500/15 rounded-full blur-2xl pointer-events-none" />
 
-          {/* Left Column: Title & Subtitle */}
-          <div className="flex flex-col gap-2 relative z-10 max-w-xl">
-            <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-[#a892d6] font-semibold">
-                CONTACTO DIRECTO
-              </span>
+            {/* Left Column: Title & Subtitle */}
+            <div className="flex flex-col gap-3 relative z-10 max-w-xl">
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-purple-300 font-bold">
+                  CONTACTO DIRECTO
+                </span>
+              </div>
+
+              <h2 className="font-['Syne'] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight uppercase">
+                ¿LISTOS PARA <span className="bg-gradient-to-r from-pink-400 via-purple-300 to-cyan-300 bg-clip-text text-transparent">POTENCIAR TU MARCA?</span>
+              </h2>
+              
+              <p className="font-['Plus_Jakarta_Sans'] text-sm sm:text-base text-purple-100/90 leading-relaxed font-normal">
+                Conversemos sobre tu proyecto, cotizaciones de branding, campañas Meta Ads o diseño de empaques sin compromiso.
+              </p>
             </div>
 
-            <h2 className="font-['Outfit'] font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight leading-tight">
-              ¿Listos para <span className="text-[#c0a2fd]">potenciar tu marca?</span>
-            </h2>
-            
-            <p className="font-['Plus_Jakarta_Sans'] text-xs sm:text-sm text-[#cdc3e3] leading-relaxed">
-              Conversemos sobre tu proyecto y coordinemos cotizaciones sin compromiso.
-            </p>
-          </div>
+            {/* Right Column: Official WhatsApp CTA Button */}
+            <div className="relative z-10 shrink-0">
+              <a
+                href="https://wa.me/51922572935"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-['Plus_Jakarta_Sans'] font-extrabold text-sm sm:text-base uppercase tracking-wider shadow-[0_0_35px_rgba(16,185,129,0.5)] hover:shadow-[0_0_50px_rgba(16,185,129,0.7)] transition-all duration-300 transform hover:-translate-y-1 active:scale-95 group/btn"
+              >
+                <OfficialWhatsAppIcon className="w-6 h-6 shrink-0 text-white" />
+                <span>Contactar por WhatsApp</span>
+                <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1.5 transition-transform shrink-0" />
+              </a>
+            </div>
 
-          {/* Right Column: Official WhatsApp CTA Button */}
-          <div className="relative z-10 shrink-0">
-            <a
-              href="https://wa.me/51922572935"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-[#10b981] hover:bg-[#059669] text-white font-['Plus_Jakarta_Sans'] font-bold text-sm sm:text-base shadow-[0_4px_24px_rgba(16,185,129,0.45)] transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 group/btn"
-            >
-              <OfficialWhatsAppIcon className="w-5 h-5 shrink-0" />
-              <span>Contactar por WhatsApp</span>
-              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform shrink-0" />
-            </a>
           </div>
-
         </div>
       </FadeInUp>
     </section>
   );
 };
+

@@ -1,20 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Sparkles, ShieldCheck } from 'lucide-react';
+import { Mail, Sparkles, ShieldCheck, Award } from 'lucide-react';
 import { InstagramIcon, WhatsAppIcon } from './icons/SocialIcons';
 import { AnimatedWords, AnimatedLetters, FadeInUp, ScaleIn } from './AnimatedText';
 import rominaVideo from '../assets/rominaVideo.mp4';
 
 export const Story = () => {
   return (
-    <section id="sobre-mi" className="w-full max-w-[1280px] mx-auto px-5 md:px-12 py-16 md:py-24">
-      <div className="bg-[#f7f1ff] rounded-3xl p-6 sm:p-12 shadow-xl relative overflow-hidden border border-[#e6dffa]">
+    <section id="sobre-mi" className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 py-20 md:py-28 relative">
+      
+      {/* Background Section Glow */}
+      <div className="absolute top-1/2 left-0 w-96 h-96 rounded-full bg-purple-600/20 blur-[130px] pointer-events-none" />
+
+      <div className="bg-[#0f0b1e]/90 backdrop-blur-2xl rounded-3xl p-6 sm:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.6)] relative overflow-hidden border border-white/10">
         
         {/* Glow ambient lights */}
-        <div className="absolute -bottom-16 -right-16 w-80 h-80 rounded-full bg-[#ccbafd]/30 blur-2xl pointer-events-none" />
-        <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-[#845ec2]/15 blur-2xl pointer-events-none" />
+        <div className="absolute -bottom-16 -right-16 w-80 h-80 rounded-full bg-pink-500/15 blur-3xl pointer-events-none" />
+        <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-purple-500/20 blur-3xl pointer-events-none" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
           
           {/* Visual Column / Video avatar presentation */}
           <div className="lg:col-span-5 flex flex-col items-center text-center">
@@ -24,13 +28,13 @@ export const Story = () => {
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ type: 'spring', stiffness: 100, damping: 15 }}
-              className="relative w-64 h-[24rem] sm:w-72 sm:h-[26.5rem] rounded-3xl p-2 bg-gradient-to-tr from-[#4b2a8d] via-[#845ec2] to-[#ccbafd] shadow-2xl"
+              className="relative w-64 h-[24rem] sm:w-72 sm:h-[26.5rem] rounded-3xl p-1.5 bg-gradient-to-tr from-[#ec4899] via-[#8b5cf6] to-[#06b6d4] shadow-[0_0_40px_rgba(168,85,247,0.4)]"
             >
               {/* Animated outer ring glow */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-[#4b2a8d] to-[#ccbafd] opacity-40 blur-lg animate-pulse" />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-pink-500 to-purple-500 opacity-50 blur-xl animate-pulse" />
 
-              {/* Video Container (Fits Full Head & Portrait Aspect Ratio) */}
-              <div className="relative w-full h-full rounded-[1.25rem] overflow-hidden bg-[#1c192c] flex items-center justify-center border-2 border-white/80 shadow-inner pointer-events-none select-none">
+              {/* Video Container */}
+              <div className="relative w-full h-full rounded-[1.25rem] overflow-hidden bg-[#090713] flex items-center justify-center border border-white/20 shadow-inner pointer-events-none select-none">
                 <video
                   src={rominaVideo}
                   autoPlay
@@ -55,9 +59,9 @@ export const Story = () => {
                 href="https://wa.me/51922572935"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white text-[#4b2a8d] font-['Plus_Jakarta_Sans'] font-semibold text-xs hover:bg-[#6344a6] hover:text-white transition-all shadow-sm border border-[#e6dffa] hover:scale-105"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 text-white font-['Plus_Jakarta_Sans'] font-semibold text-xs hover:bg-emerald-500 hover:text-white transition-all shadow-md border border-white/15 hover:scale-105"
               >
-                <WhatsAppIcon className="w-3.5 h-3.5 text-[#4b2a8d] group-hover:text-white" />
+                <WhatsAppIcon className="w-3.5 h-3.5 text-emerald-400" />
                 <span>922 572 935</span>
               </a>
 
@@ -65,81 +69,81 @@ export const Story = () => {
                 href="https://instagram.com/romina_raffo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white text-[#4b2a8d] font-['Plus_Jakarta_Sans'] font-semibold text-xs hover:bg-[#6344a6] hover:text-white transition-all shadow-sm border border-[#e6dffa] hover:scale-105"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 text-white font-['Plus_Jakarta_Sans'] font-semibold text-xs hover:bg-pink-600 hover:text-white transition-all shadow-md border border-white/15 hover:scale-105"
               >
-                <InstagramIcon className="w-3.5 h-3.5 text-[#4b2a8d] group-hover:text-white" />
+                <InstagramIcon className="w-3.5 h-3.5 text-pink-400" />
                 <span>@romina_raffo</span>
               </a>
 
               <a
                 href="mailto:giulir109@gmail.com"
-                className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white text-[#4b2a8d] font-['Plus_Jakarta_Sans'] font-semibold text-xs hover:bg-[#6344a6] hover:text-white transition-all shadow-sm border border-[#e6dffa] hover:scale-105"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 text-white font-['Plus_Jakarta_Sans'] font-semibold text-xs hover:bg-purple-600 hover:text-white transition-all shadow-md border border-white/15 hover:scale-105"
               >
-                <Mail className="w-3.5 h-3.5" />
+                <Mail className="w-3.5 h-3.5 text-purple-400" />
                 <span>giulir109@gmail.com</span>
               </a>
             </motion.div>
           </div>
 
-          {/* Bio / Story Column with Animated Text */}
+          {/* Bio / Story Column */}
           <div className="lg:col-span-7 flex flex-col gap-4">
             
             <FadeInUp delay={0.1}>
               <div className="flex items-center gap-2">
-                <span className="w-8 h-1 bg-[#4b2a8d] rounded-full animate-pulse" />
-                <span className="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-[#655591] font-bold">
-                  SOBRE MÍ
+                <span className="w-8 h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full animate-pulse" />
+                <span className="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-purple-300 font-bold">
+                  PERFIL PROFESIONAL
                 </span>
               </div>
             </FadeInUp>
 
-            {/* Main Title with Animated Words */}
-            <h2 className="font-['Outfit'] font-bold text-3xl sm:text-4xl lg:text-5xl text-[#4b2a8d] tracking-tight leading-tight">
-              <AnimatedLetters text="¡Hola! Soy Giulianna Romina Raffo" delay={0.2} stagger={0.03} />
+            {/* Main Title */}
+            <h2 className="font-['Syne'] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight uppercase">
+              Giulianna Romina Raffo
             </h2>
 
             {/* Bio Paragraphs */}
             <FadeInUp delay={0.3}>
-              <p className="font-['Plus_Jakarta_Sans'] text-base sm:text-lg text-[#494551] leading-relaxed">
-                Profesional egresada en <strong className="text-[#4b2a8d]">Gestión de Marketing Empresarial (2025)</strong> y titulada en <strong className="text-[#4b2a8d]">Diseño Gráfico Digital</strong>, con <strong className="text-[#4b2a8d]">8 años de trayectoria</strong> en el sector creativo y publicitario.
+              <p className="font-['Plus_Jakarta_Sans'] text-base sm:text-lg text-purple-100/90 leading-relaxed font-normal">
+                Profesional egresada en <strong className="text-pink-400 font-bold">Gestión de Marketing Empresarial (2025)</strong> y titulada en <strong className="text-purple-300 font-bold">Diseño Gráfico Digital</strong>, con <strong className="text-cyan-400 font-bold">8 años de trayectoria</strong> en el sector creativo y publicitario.
               </p>
             </FadeInUp>
 
             <FadeInUp delay={0.4}>
-              <p className="font-['Plus_Jakarta_Sans'] text-sm sm:text-base text-[#494551] leading-relaxed">
-                Mi perfil híbrido me permite fusionar la creatividad visual con el pensamiento estratégico. Actualmente me especializo en la gestión integral de cuentas, el manejo de Meta Ads y la dirección de comunidades online. Me apasiona liderar proyectos desde la conceptualización gráfica hasta el análisis de resultados, asegurando que cada campaña conecte con la audiencia y cumpla los objetivos de la marca.
+              <p className="font-['Plus_Jakarta_Sans'] text-sm sm:text-base text-white/80 leading-relaxed font-normal">
+                Mi perfil híbrido me permite fusionar la creatividad visual de alto nivel con el pensamiento estratégico de negocios. Me especializo en la dirección de arte, creación de branding 360°, manejo de pautas Meta Ads e identidades de marca contundentes.
               </p>
             </FadeInUp>
 
             <FadeInUp delay={0.5}>
-              <div className="bg-white p-4 rounded-xl border border-[#e6dffa] mt-2 shadow-sm hover:shadow-md transition-shadow">
-                <p className="font-['Plus_Jakarta_Sans'] text-xs sm:text-sm text-[#4b2a8d] font-semibold flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-[#845ec2] shrink-0 animate-spin" style={{ animationDuration: '6s' }} />
-                  <span>Este portafolio contiene una recopilación de los trabajos más destacados realizados durante mis años de experiencia.</span>
+              <div className="bg-white/5 backdrop-blur-md p-4 rounded-2xl border border-white/10 mt-2 shadow-inner">
+                <p className="font-['Plus_Jakarta_Sans'] text-xs sm:text-sm text-purple-200 font-medium flex items-center gap-2.5">
+                  <Sparkles className="w-5 h-5 text-amber-400 shrink-0 animate-spin" style={{ animationDuration: '6s' }} />
+                  <span>Portafolio con casos reales de clientes corporativos (Cassinelli, Ceresita, Alianza Lima, Vilanova, etc.).</span>
                 </p>
               </div>
             </FadeInUp>
 
-            {/* Specialties grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4 pt-2">
+            {/* Specialties Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4 pt-2">
               <ScaleIn delay={0.6}>
-                <div className="flex flex-col p-3 rounded-xl bg-white/60 border border-[#e6dffa]">
-                  <span className="font-['Plus_Jakarta_Sans'] text-[0.6875rem] uppercase tracking-wider text-[#655591] font-semibold">Especialidad 1</span>
-                  <span className="font-['Outfit'] font-semibold text-sm sm:text-base text-[#1c192c]">Branding &amp; Identidad</span>
+                <div className="flex flex-col p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-400/50 transition-all">
+                  <span className="font-['Plus_Jakarta_Sans'] text-[0.6875rem] uppercase tracking-wider text-purple-300 font-bold">Especialidad 01</span>
+                  <span className="font-['Outfit'] font-bold text-sm sm:text-base text-white mt-0.5">Branding &amp; Identidad</span>
                 </div>
               </ScaleIn>
 
               <ScaleIn delay={0.7}>
-                <div className="flex flex-col p-3 rounded-xl bg-white/60 border border-[#e6dffa]">
-                  <span className="font-['Plus_Jakarta_Sans'] text-[0.6875rem] uppercase tracking-wider text-[#655591] font-semibold">Especialidad 2</span>
-                  <span className="font-['Outfit'] font-semibold text-sm sm:text-base text-[#1c192c]">Meta Ads &amp; Estrategia</span>
+                <div className="flex flex-col p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-pink-400/50 transition-all">
+                  <span className="font-['Plus_Jakarta_Sans'] text-[0.6875rem] uppercase tracking-wider text-pink-300 font-bold">Especialidad 02</span>
+                  <span className="font-['Outfit'] font-bold text-sm sm:text-base text-white mt-0.5">Meta Ads &amp; RRSS</span>
                 </div>
               </ScaleIn>
 
               <ScaleIn delay={0.8}>
-                <div className="flex flex-col col-span-2 sm:col-span-1 p-3 rounded-xl bg-white/60 border border-[#e6dffa]">
-                  <span className="font-['Plus_Jakarta_Sans'] text-[0.6875rem] uppercase tracking-wider text-[#655591] font-semibold">Especialidad 3</span>
-                  <span className="font-['Outfit'] font-semibold text-sm sm:text-base text-[#1c192c]">Audiovisual &amp; Editorial</span>
+                <div className="flex flex-col col-span-2 sm:col-span-1 p-3.5 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/50 transition-all">
+                  <span className="font-['Plus_Jakarta_Sans'] text-[0.6875rem] uppercase tracking-wider text-cyan-300 font-bold">Especialidad 03</span>
+                  <span className="font-['Outfit'] font-bold text-sm sm:text-base text-white mt-0.5">Packaging &amp; Print</span>
                 </div>
               </ScaleIn>
             </div>
@@ -151,3 +155,4 @@ export const Story = () => {
     </section>
   );
 };
+
