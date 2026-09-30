@@ -233,7 +233,7 @@ export const CaseStudyDetail = ({ caseStudy, onBack, onNavigateCase }) => {
                   Visor interactivo <span className="sm:hidden text-purple-300 font-semibold">(Desliza 👈 👉 con el dedo)</span>
                 </span>
               </div>
-              <span className="font-semibold text-purple-300">Romina Raffo Portfolio 2026</span>
+              <span className="hidden sm:inline-block font-semibold text-purple-300">Romina Raffo Portfolio 2026</span>
             </div>
 
           </div>
