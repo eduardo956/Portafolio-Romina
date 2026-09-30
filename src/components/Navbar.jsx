@@ -189,16 +189,6 @@ export const Navbar = ({ onSelectModule, onGoHome }) => {
 
         {/* Action Controls */}
         <div className="flex items-center gap-3">
-          <a
-            href="https://wa.me/51922572935"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-700 text-white font-['Plus_Jakarta_Sans'] font-bold text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(109,40,217,0.4)] hover:shadow-[0_0_30px_rgba(124,58,237,0.6)] transition-all hover:scale-105 active:scale-95 border border-purple-400/30"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-purple-200" />
-            <span>Contacto</span>
-          </a>
-
           {/* Mobile menu trigger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
