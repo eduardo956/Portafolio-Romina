@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, ArrowRight, ArrowLeft as West, ArrowRight as East, Eye as VisorIcon, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowLeft as West, ArrowRight as East, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const CaseStudyDetail = ({ caseStudy, onBack, onNavigateCase }) => {
   const [activePieceIndex, setActivePieceIndex] = useState(0);
@@ -224,17 +224,6 @@ export const CaseStudyDetail = ({ caseStudy, onBack, onNavigateCase }) => {
                 ))}
               </div>
             )}
-
-            {/* Visor Footer */}
-            <div className="flex flex-col sm:flex-row items-center justify-between text-purple-200/70 font-['Plus_Jakarta_Sans'] text-xs px-1 pt-1 gap-2 text-center sm:text-left">
-              <div className="flex items-center gap-2 justify-center sm:justify-start">
-                <VisorIcon className="w-4 h-4 text-purple-300 shrink-0" />
-                <span>
-                  Visor interactivo <span className="sm:hidden text-purple-300 font-semibold">(Desliza 👈 👉 con el dedo)</span>
-                </span>
-              </div>
-              <span className="hidden sm:inline-block font-semibold text-purple-300">Romina Raffo Portfolio 2026</span>
-            </div>
 
           </div>
 
