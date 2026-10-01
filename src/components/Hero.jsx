@@ -22,37 +22,31 @@ export const Hero = () => {
 
       tl.fromTo(
         '.hero-title',
-        { opacity: 0, y: 50, filter: 'blur(10px)', scale: 0.95 },
-        { opacity: 1, y: 0, filter: 'blur(0px)', scale: 1, duration: 1.1 }
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }
       )
         .fromTo(
           '.hero-name',
-          { opacity: 0, y: 30, letterSpacing: '0.15em' },
-          { opacity: 1, y: 0, letterSpacing: '0.05em', duration: 0.8 },
-          '-=0.7'
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' },
+          '-=0.6'
         )
         .fromTo(
           '.hero-tagline',
-          { opacity: 0, scale: 0.88, y: 20 },
-          { opacity: 1, scale: 1, y: 0, duration: 0.7, ease: 'back.out(1.5)' },
-          '-=0.5'
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
+          '-=0.4'
         )
         .fromTo(
           '.hero-subtitle',
-          { opacity: 0, y: 25 },
-          { opacity: 1, y: 0, duration: 0.8 },
-          '-=0.5'
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
+          '-=0.4'
         )
         .fromTo(
-          '.hero-btn',
-          { opacity: 0, y: 30, scale: 0.9 },
-          { opacity: 1, y: 0, scale: 1, stagger: 0.15, duration: 0.7, ease: 'power2.out' },
-          '-=0.5'
-        )
-        .fromTo(
-          '.hero-badge',
-          { opacity: 0, y: 35, scale: 0.92 },
-          { opacity: 1, y: 0, scale: 1, stagger: 0.12, duration: 0.8, ease: 'back.out(1.4)' },
+          ['.hero-btn', '.hero-badge'],
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', stagger: 0 },
           '-=0.4'
         );
 
@@ -131,21 +125,21 @@ export const Hero = () => {
       <div className="relative z-10 max-w-[1320px] mx-auto flex flex-col items-center">
         {/* Hero Main Heading */}
         <div className="flex flex-col items-center text-center max-w-5xl">
-          <h1 className="hero-title font-['Outfit'] font-black text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight text-white uppercase drop-shadow-[0_10px_35px_rgba(109,40,217,0.4)] leading-[0.9]">
+          <h1 className="hero-title opacity-0 font-['Outfit'] font-black text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight text-white uppercase drop-shadow-[0_10px_35px_rgba(109,40,217,0.4)] leading-[0.9]">
             PORTAFOLIO
           </h1>
 
-          <span className="hero-name font-['Outfit'] font-bold text-2xl sm:text-4xl md:text-5xl text-[#c4b5fd] tracking-wide uppercase mt-2 sm:mt-3">
+          <span className="hero-name opacity-0 font-['Outfit'] font-bold text-2xl sm:text-4xl md:text-5xl text-[#c4b5fd] tracking-wide uppercase mt-2 sm:mt-3">
             ROMINA RAFFO
           </span>
 
-          <span className="hero-tagline font-['Outfit'] font-extrabold text-xl sm:text-3xl md:text-4xl text-purple-200/90 tracking-wider uppercase mt-3 py-1 px-6 rounded-full bg-white/5 border border-purple-500/20 backdrop-blur-md">
+          <span className="hero-tagline opacity-0 font-['Outfit'] font-extrabold text-xl sm:text-3xl md:text-4xl text-purple-200/90 tracking-wider uppercase mt-3 py-1 px-6 rounded-full bg-white/5 border border-purple-500/20 backdrop-blur-md">
             VISUAL DESIGNER &amp; META ADS
           </span>
         </div>
 
         {/* Subtitle Paragraph */}
-        <p className="hero-subtitle font-['Plus_Jakarta_Sans'] text-base sm:text-lg md:text-xl text-purple-100/90 max-w-2xl text-center mt-7 leading-relaxed font-normal">
+        <p className="hero-subtitle opacity-0 font-['Plus_Jakarta_Sans'] text-base sm:text-lg md:text-xl text-purple-100/90 max-w-2xl text-center mt-7 leading-relaxed font-normal">
           Diseñadora Gráfica &amp; Especialista en Marketing Digital con{' '}
           <strong className="text-white font-bold">8+ años de experiencia</strong>. Transformo marcas mediante identidades visuales memorables, empaques y campañas de alta conversión.
         </p>
@@ -154,7 +148,7 @@ export const Hero = () => {
         <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
           <a
             href="#proyectos"
-            className="hero-btn group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#6d28d9] via-[#7c3aed] to-[#4c1d95] text-white font-['Plus_Jakarta_Sans'] font-bold text-sm rounded-full shadow-[0_0_35px_rgba(109,40,217,0.5)] hover:shadow-[0_0_50px_rgba(124,58,237,0.7)] transition-all duration-300 transform hover:-translate-y-1 active:scale-95 overflow-hidden border border-purple-400/30"
+            className="hero-btn opacity-0 group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#6d28d9] via-[#7c3aed] to-[#4c1d95] text-white font-['Plus_Jakarta_Sans'] font-bold text-sm rounded-full shadow-[0_0_35px_rgba(109,40,217,0.5)] hover:shadow-[0_0_50px_rgba(124,58,237,0.7)] transition-[background-color,border-color,box-shadow] duration-300 hover:-translate-y-1 active:scale-95 overflow-hidden border border-purple-400/30"
           >
             <span className="relative z-10 flex items-center gap-2">
               <span>EXPLORAR CASOS DE ÉXITO</span>
@@ -166,7 +160,7 @@ export const Hero = () => {
             href="https://wa.me/51922572935"
             target="_blank"
             rel="noopener noreferrer"
-            className="hero-btn inline-flex items-center gap-3 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-['Plus_Jakarta_Sans'] font-bold text-sm rounded-full backdrop-blur-xl transition-all border border-purple-300/30 hover:border-purple-300/60 transform hover:-translate-y-1 active:scale-95 shadow-lg"
+            className="hero-btn opacity-0 inline-flex items-center gap-3 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-['Plus_Jakarta_Sans'] font-bold text-sm rounded-full backdrop-blur-xl transition-[background-color,border-color,box-shadow] duration-300 border border-purple-300/30 hover:border-purple-300/60 hover:-translate-y-1 active:scale-95 shadow-lg"
           >
             <WhatsAppIcon className="w-5 h-5 text-[#c4b5fd]" />
             <span>CONTACTAR POR WHATSAPP</span>
@@ -175,7 +169,7 @@ export const Hero = () => {
 
         {/* Quick Highlights Metrics Bar */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-4xl mt-12">
-          <div className="hero-badge bg-white/5 backdrop-blur-xl rounded-2xl p-5 flex flex-col items-center text-center border border-purple-500/20 hover:border-purple-400/50 transition-all hover:-translate-y-1 shadow-2xl group">
+          <div className="hero-badge opacity-0 bg-white/5 backdrop-blur-xl rounded-2xl p-5 flex flex-col items-center text-center border border-purple-500/20 hover:border-purple-400/50 transition-[background-color,border-color,box-shadow] duration-300 hover:-translate-y-1 shadow-2xl group">
             <span className="font-['Outfit'] text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-indigo-200 group-hover:scale-105 transition-transform">
               +8 AÑOS
             </span>
@@ -184,7 +178,7 @@ export const Hero = () => {
             </span>
           </div>
 
-          <div className="hero-badge bg-white/5 backdrop-blur-xl rounded-2xl p-5 flex flex-col items-center text-center border border-purple-500/20 hover:border-purple-400/50 transition-all hover:-translate-y-1 shadow-2xl group">
+          <div className="hero-badge opacity-0 bg-white/5 backdrop-blur-xl rounded-2xl p-5 flex flex-col items-center text-center border border-purple-500/20 hover:border-purple-400/50 transition-[background-color,border-color,box-shadow] duration-300 hover:-translate-y-1 shadow-2xl group">
             <span className="font-['Outfit'] text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-violet-200 group-hover:scale-105 transition-transform">
               META ADS
             </span>
@@ -193,7 +187,7 @@ export const Hero = () => {
             </span>
           </div>
 
-          <div className="hero-badge bg-white/5 backdrop-blur-xl rounded-2xl p-5 flex flex-col items-center text-center border border-purple-500/20 hover:border-purple-400/50 transition-all hover:-translate-y-1 shadow-2xl group">
+          <div className="hero-badge opacity-0 bg-white/5 backdrop-blur-xl rounded-2xl p-5 flex flex-col items-center text-center border border-purple-500/20 hover:border-purple-400/50 transition-[background-color,border-color,box-shadow] duration-300 hover:-translate-y-1 shadow-2xl group">
             <span className="font-['Outfit'] text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-purple-200 group-hover:scale-105 transition-transform">
               360° BRAND
             </span>

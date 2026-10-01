@@ -166,7 +166,7 @@ export const CaseStudyDetail = ({ caseStudy, onBack, onNavigateCase }) => {
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
-              className="relative w-full rounded-xl sm:rounded-2xl overflow-hidden bg-white border border-purple-500/20 flex items-center justify-center shadow-inner min-h-[300px] sm:min-h-[480px] md:min-h-[580px] max-h-[750px] p-2 sm:p-4 group touch-pan-y select-none"
+              className="relative w-full h-[400px] sm:h-[540px] md:h-[640px] rounded-xl sm:rounded-2xl overflow-hidden bg-white border border-purple-500/20 flex items-center justify-center shadow-inner p-3 sm:p-6 group touch-pan-y select-none"
             >
               
               {/* Left Carousel Arrow Overlay */}
@@ -190,7 +190,7 @@ export const CaseStudyDetail = ({ caseStudy, onBack, onNavigateCase }) => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
                   transition={{ duration: 0.2, ease: 'easeOut' }}
-                  className="w-full max-w-[850px] max-h-[680px] h-auto object-contain transition-all duration-300 pointer-events-none"
+                  className="w-full h-full object-contain transition-all duration-300 pointer-events-none"
                 />
               </AnimatePresence>
 
