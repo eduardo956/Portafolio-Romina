@@ -138,7 +138,7 @@ export const Navbar = ({ onSelectModule, onGoHome }) => {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 8, scale: 0.96 }}
                   transition={{ duration: 0.2, ease: 'easeOut' }}
-                  className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-[#120b26]/98 backdrop-blur-2xl rounded-2xl p-2.5 shadow-2xl border border-purple-500/30 z-50 flex flex-col gap-1"
+                  className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-72 bg-[#120b26] rounded-2xl p-2.5 shadow-[0_20px_50px_rgba(0,0,0,0.9)] border border-purple-500/40 z-50 flex flex-col gap-1"
                 >
                   <div className="flex flex-col gap-1">
                     {modulesList.map((item) => {
@@ -201,7 +201,7 @@ export const Navbar = ({ onSelectModule, onGoHome }) => {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-[#120b26]/98 backdrop-blur-2xl border-b border-purple-500/30 px-6 py-6 space-y-3 shadow-2xl max-h-[85vh] overflow-y-auto">
+        <div className="xl:hidden bg-[#120b26] border-b border-purple-500/30 px-6 py-6 space-y-3 shadow-2xl max-h-[85vh] overflow-y-auto">
           <a
             href="#hero"
             onClick={(e) => handleHomeClick(e, '#hero')}
