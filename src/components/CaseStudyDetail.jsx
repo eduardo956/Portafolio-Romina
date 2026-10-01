@@ -161,19 +161,21 @@ export const CaseStudyDetail = ({ caseStudy, onBack, onNavigateCase }) => {
               )}
             </div>
 
-            {/* Main Interactive Artwork Image Container */}
+            {/* Main Interactive Artwork Image Container - Luminous Lavender Pearl Frosted Glass */}
             <div 
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
-              className="relative w-full h-[400px] sm:h-[540px] md:h-[640px] rounded-xl sm:rounded-2xl overflow-hidden bg-white border border-purple-500/20 flex items-center justify-center shadow-inner p-3 sm:p-6 group touch-pan-y select-none"
+              className="relative w-full h-[400px] sm:h-[540px] md:h-[640px] rounded-xl sm:rounded-2xl overflow-hidden bg-gradient-to-b from-[#f8f6fc] via-[#f2ebfa] to-[#e8dff5] backdrop-blur-2xl border border-white/40 shadow-[0_25px_60px_rgba(0,0,0,0.5),inset_0_2px_4px_rgba(255,255,255,0.8)] flex items-center justify-center p-4 sm:p-8 group touch-pan-y select-none"
             >
+              {/* Soft Studio Highlight Aura */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.6)_0%,rgba(240,230,255,0.3)_60%,transparent_90%)] pointer-events-none" />
               
               {/* Left Carousel Arrow Overlay */}
               {piecesCount > 1 && (
                 <button
                   onClick={handlePrevPiece}
-                  className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3.5 rounded-full bg-[#0c0818]/80 hover:bg-purple-700 text-white shadow-2xl border border-purple-400/40 hover:scale-110 active:scale-95 backdrop-blur-md transition-all opacity-80 group-hover:opacity-100"
+                  className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3.5 rounded-full bg-[#0c0818]/85 hover:bg-purple-700 text-white shadow-2xl border border-purple-400/40 hover:scale-110 active:scale-95 backdrop-blur-md transition-all opacity-80 group-hover:opacity-100"
                   title="Anterior"
                 >
                   <ChevronLeft className="w-6 h-6" />
@@ -190,7 +192,7 @@ export const CaseStudyDetail = ({ caseStudy, onBack, onNavigateCase }) => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
                   transition={{ duration: 0.2, ease: 'easeOut' }}
-                  className="w-full h-full object-contain transition-all duration-300 pointer-events-none"
+                  className="relative z-10 w-full h-full object-contain transition-all duration-300 pointer-events-none filter drop-shadow-[0_10px_25px_rgba(0,0,0,0.15)]"
                 />
               </AnimatePresence>
 
@@ -198,7 +200,7 @@ export const CaseStudyDetail = ({ caseStudy, onBack, onNavigateCase }) => {
               {piecesCount > 1 && (
                 <button
                   onClick={handleNextPiece}
-                  className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3.5 rounded-full bg-[#0c0818]/80 hover:bg-purple-700 text-white shadow-2xl border border-purple-400/40 hover:scale-110 active:scale-95 backdrop-blur-md transition-all opacity-80 group-hover:opacity-100"
+                  className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3.5 rounded-full bg-[#0c0818]/85 hover:bg-purple-700 text-white shadow-2xl border border-purple-400/40 hover:scale-110 active:scale-95 backdrop-blur-md transition-all opacity-80 group-hover:opacity-100"
                   title="Siguiente"
                 >
                   <ChevronRight className="w-6 h-6" />
@@ -249,11 +251,12 @@ export const CaseStudyDetail = ({ caseStudy, onBack, onNavigateCase }) => {
                       activePieceIndex === idx ? 'border-purple-400 ring-2 ring-purple-500/50' : 'border-purple-500/20 hover:border-purple-400/40'
                     }`}
                   >
-                    <div className="w-full h-28 sm:h-40 rounded-lg sm:rounded-xl bg-white border border-purple-500/20 overflow-hidden mb-2 sm:mb-3 relative flex items-center justify-center p-2 sm:p-3">
+                    <div className="w-full h-28 sm:h-40 rounded-lg sm:rounded-xl bg-gradient-to-b from-[#f8f6fc] via-[#f2ebfa] to-[#e8dff5] backdrop-blur-xl border border-white/40 overflow-hidden mb-2 sm:mb-3 relative flex items-center justify-center p-2 sm:p-3 shadow-inner">
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.5)_0%,transparent_75%)] pointer-events-none" />
                       <img
                         src={piece.image ? `${piece.image}?v=3` : ''}
                         alt={piece.title}
-                        className="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-300"
+                        className="relative z-10 max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-300"
                       />
                     </div>
 

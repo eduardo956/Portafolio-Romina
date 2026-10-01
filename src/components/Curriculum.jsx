@@ -189,7 +189,7 @@ export const Curriculum = () => {
                 </div>
                 <h4 className="font-['Outfit'] font-bold text-lg text-white">YALA MKT</h4>
                 <p className="font-['Plus_Jakarta_Sans'] text-xs sm:text-sm text-purple-100/90 leading-relaxed font-normal">
-                  <strong className="text-purple-300">Jefa de Cuentas:</strong> Coordinación integral de clientes corporativos (Cassinelli, Ceresita, Alianza Lima). Dirección de arte, diseño publicitario y edición audiovisual para campañas de alto alcance.
+                  <strong className="text-purple-300">Jefa de Cuentas:</strong> Coordinación integral de clientes corporativos (Cassinelli, Ceresita, Alianza Lima, Hermanos Yaipén, Vilanova, New Shine). Dirección de arte, diseño publicitario y edición audiovisual para campañas de alto alcance.
                 </p>
               </div>
 
